@@ -18,6 +18,16 @@ bool isPrime(int n)
 
     return true;
 }
+int nprime(int x, int y) {
+    int count = 0;
+    for (int i = x; i <= y; i++) {
+        int z = i;
+        if (isPrime(z)) {
+            count++;
+        }
+    }
+    return count;
+}
 // Function to print primes
 void printPrime(int n)
 {
@@ -28,7 +38,9 @@ void printPrime(int n)
 }
 
 int main()
+
 {
-    int n = 78;
-    printPrime(n);
+    int x, y;
+    cin >> x >> y;
+    cout << nprime(x,y);
 }
